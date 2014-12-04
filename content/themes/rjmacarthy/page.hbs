@@ -1,0 +1,31 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+<main class="content" role="main">
+
+    <header class="post-header">
+        <a class="blog-logo" href="{{@blog.url}}">
+            <span class="blog-title">{{@blog.title}}</span>
+        </a>
+        <div class="blog-logo-page">
+            <img src="{{asset "images/logo-human-geek-page.png"}}" alt="logo page {{@blog.title}}" />
+        </div>
+    </header>
+
+    <article class="{{post_class}}">
+
+        {{#post}}
+
+            <h1 class="post-title">{{{title}}}</h1>
+
+            <section class="post-content">
+                {{content}}
+            </section>
+
+        {{/post}}
+
+    </article>
+
+</main>
